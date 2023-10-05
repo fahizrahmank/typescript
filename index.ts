@@ -16,11 +16,10 @@
 // };
 // userDeatils.age = 200;
 
-
 // interface
 
 // interface Details {
-//     name: string; age: number 
+//     name: string; age: number
 //     getName:() => void
 // }
 
@@ -29,22 +28,77 @@
 //     name: "fahix",
 //     getName() {
 //         console.log(this.name);
-        
+
 //     },
 //   };
 
-  //type
+//type
 
-  type Details = {
-        name: string; age: number 
-        getName:() => void
-    }
+//   type Details = {
+//         name: string; age: number
+//         getName:() => void
+//     }
 
-    let userDetails:Details = {
-    age: 100,
-    name: "fahix",
-    getName() {
-        console.log(this.name);
-        
-    },
-  };
+//     let userDetails:Details = {
+//     age: 100,
+//     name: "fahix",
+//     getName() {
+//         console.log(this.name);
+
+//     },
+//   };
+
+//union / optional
+
+// type Details = {
+//   name: string;
+//   age?: number | string;
+//   getName?: () => void;
+// };
+
+// let userDetails: Details = {
+//   age: "100",
+//   name: "fahix",
+//   getName() {
+//     console.log(this.name);
+//   },
+// };
+
+// let skillls: (string | number | boolean)[] = ["js", "ts", "css", 20, 40, false];
+
+//functions
+
+// type Details = {
+//   name: string;
+//   age?: number | string;
+//   getName?: () => void;
+// };
+
+// let userDetails: Details = {
+//   age: "100",
+//   name: "fahix",
+//   getName() {
+//     console.log(this.name);
+//   },
+// };
+// function getUserName(userDetails:Details):string {
+//     return  userDetails.name;
+// }
+
+// const newVal = getUserName(userDetails)
+// newVal.length
+
+//named types
+
+ type StatusType = 'pending ' | 'completed' | 'failed'
+type ToggleSwitch = 'on'| 'off'
+
+ let currentStatus : StatusType = "completed"
+ let toggleSwitch : ToggleSwitch = 'off'
+
+ toggleSwitch = 'on'
+         // from api
+const response = 'pending'
+if(response === 'pending') {
+    currentStatus = 'pending '
+}         
